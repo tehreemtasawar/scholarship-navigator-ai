@@ -30,9 +30,10 @@ Scholarship Navigator AI replaces guesswork with a **two-tier architecture**:
   - Evaluates each expense as `covered`, `partial`, `not_covered`, or `unknown`.
   - Flags gaps where students must pay out-of-pocket costs before departing.
 
-- **Tier 3: Grounded AI Explanation (Server-Side Gemini 3.8 Flash)**
-  - Server-side Gemini API calls are strictly constrained to factual records in the dataset.
-  - Answers specific questions without guessing or making claims of acceptance guarantees.
+- **Tier 3: Grounded AI Explanation (Google Gemini API Integration)**
+  - Integrates Google's Gemini API through the `@google/genai` TypeScript SDK for scholarship explanations and question answering.
+  - Live Gemini generation in the deployed application has not yet been confirmed.
+  - Deterministic eligibility and funding evaluations operate independently of AI-generated explanations.
 
 - **Tier 4: Actionable Application Roadmap & Comparison Lab**
   - Auto-generates application checklists categorizing confirmed provider requirements from general preparation milestones.
@@ -44,7 +45,7 @@ Scholarship Navigator AI replaces guesswork with a **two-tier architecture**:
 
 - **Frontend:** React 19, TypeScript, Tailwind CSS v4, Lucide Icons
 - **Backend:** Express.js running on Node.js / tsx
-- **AI Integration:** `@google/genai` TypeScript SDK (`gemini-3.8-flash`) via secure server-side endpoints
+- **AI Integration:** Google GenAI TypeScript SDK (`@google/genai`); live production generation remains unverified.
 - **Data Architecture:** Fully typed TypeScript scholarship schema with verified provider data and test fixtures
 - **State & Persistence:** React Context with browser `localStorage` for offline milestone tracking
 - **Testing:** `node:test` test runner executed via `tsx --test`
@@ -92,7 +93,7 @@ Scholarship Navigator AI replaces guesswork with a **two-tier architecture**:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/scholarship-navigator-ai.git
+git clone https://github.com/tehreemtasawar/scholarship-navigator-ai.git
 cd scholarship-navigator-ai
 ```
 
@@ -186,7 +187,28 @@ To add a new scholarship, add an entry to `src/data/scholarships.ts` matching th
 
 ---
 
-## 9. Privacy, Security & Disclaimers
+## 9. Product Screenshots
+
+### Home Page
+![Scholarship Navigator AI Home Page](screenshots/home-page.png)
+
+### Scholarship Results — Part 1
+![Scholarship Results Part 1](screenshots/scholarship-results-part-1.png)
+
+### Scholarship Results — Part 2
+![Scholarship Results Part 2](screenshots/scholarship-results-part-2.png)
+
+### Scholarship Details
+![Scholarship Details and Funding Breakdown](screenshots/scholarship-details.png)
+
+### Scholarship Comparison
+![Scholarship Comparison](screenshots/comparison.png)
+
+### Application Roadmap
+![Application Roadmap](screenshots/roadmap.png)
+
+
+## 10. Privacy, Security & Disclaimers
 
 - **Zero-Account Privacy:** No user accounts, passwords, or personal documents are required.
 - **No Document Uploads:** We do not request CNIC numbers, passport copies, or bank credentials.
@@ -196,7 +218,7 @@ To add a new scholarship, add an entry to `src/data/scholarships.ts` matching th
 
 ---
 
-## 10. Individual Contribution
+## 11. Individual Contribution
 
 - **Full-Stack Engineering & AI Architecture:** Designed two-tier matching engine, server-side Gemini endpoints, and React SPA.
 - **Data Research & Verification:** Curated official funding data, evidence citations, and official links for major global fellowships.
