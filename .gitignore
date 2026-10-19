@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+.aistudio/
+_audit_backup_2026-10-18/
+
+.aistudio/
+_audit_backup_2026-10-18/

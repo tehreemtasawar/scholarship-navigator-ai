@@ -1,0 +1,6 @@
+{
+  "name": "Scholarship Navigator AI",
+  "description": "Evidence-based scholarship discovery, deterministic eligibility evaluation, expense-by-expense funding reality check, and application roadmap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
