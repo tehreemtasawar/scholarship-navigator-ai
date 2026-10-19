@@ -196,7 +196,7 @@ To add a new scholarship, add an entry to `src/data/scholarships.ts` matching th
 
 ---
 
-## 10. Team Contributions
+## 10. Individual Contribution
 
 - **Full-Stack Engineering & AI Architecture:** Designed two-tier matching engine, server-side Gemini endpoints, and React SPA.
 - **Data Research & Verification:** Curated official funding data, evidence citations, and official links for major global fellowships.
